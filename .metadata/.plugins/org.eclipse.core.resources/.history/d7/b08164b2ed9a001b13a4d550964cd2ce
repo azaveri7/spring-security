@@ -1,0 +1,5 @@
+package com.anand.springcloud.security;
+
+public class UserDetailsServiceImpl {
+
+}

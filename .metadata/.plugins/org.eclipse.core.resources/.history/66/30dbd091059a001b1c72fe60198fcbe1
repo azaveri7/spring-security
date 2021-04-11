@@ -1,0 +1,22 @@
+package com.anand.springcloud.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.anand.springcloud.model.Product;
+import com.anand.springcloud.repository.ProductRepo;
+
+@RestController
+public class ProductRestController {
+
+	@Autowired
+	private ProductRepo productRepo;
+	
+	@RequestMapping()
+	public Product create(@RequestBody Product product) {
+		return productRepo.save(product);
+	}
+	
+}

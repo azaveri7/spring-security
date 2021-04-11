@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Coupon.java&apos; to &apos;productservice/src/main/java/com.anand.springcloud.dto&apos;&#x0D;&#x0A;- Original project: &apos;productservice&apos;&#x0D;&#x0A;- Destination element: &apos;productservice/src/main/java/com.anand.springcloud.dto&apos;&#x0D;&#x0A;- Original element: &apos;com.anand.springcloud.model.Coupon.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.anand.springcloud.dto" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.anand.springcloud.model{Coupon.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1618159188988" units="1" version="1.0"/>
+</session>

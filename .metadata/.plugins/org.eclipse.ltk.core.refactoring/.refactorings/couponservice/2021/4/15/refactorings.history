@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Coupon.java&apos; to &apos;productservice/src/main/java/com.anand.springcloud.model&apos;&#x0D;&#x0A;- Original project: &apos;couponservice&apos;&#x0D;&#x0A;- Destination element: &apos;productservice/src/main/java/com.anand.springcloud.model&apos;&#x0D;&#x0A;- Original element: &apos;com.anand.springcloud.model.Coupon.java&apos;" description="Copy compilation unit" destination="=productservice/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.anand.springcloud.model" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.anand.springcloud.model{Coupon.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1618063878511" units="1" version="1.0"/>
+</session>

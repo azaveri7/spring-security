@@ -1,0 +1,9 @@
+package com.anand.spring.security.provider;
+
+import org.springframework.security.authentication.AuthenticationProvider;
+
+public class MyAuthenticationProvider implements AuthenticationProvider{
+
+	
+	
+}

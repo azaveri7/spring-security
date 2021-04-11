@@ -1,0 +1,7 @@
+package com.anand.spring.security.config;
+
+import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
+
+public class MySecurityConfig implements WebSecurityConfigurer<T> {
+
+}

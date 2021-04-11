@@ -1,0 +1,5 @@
+package com.anand.spring.security.provider;
+
+public class MyAuthenticationProvider {
+
+}

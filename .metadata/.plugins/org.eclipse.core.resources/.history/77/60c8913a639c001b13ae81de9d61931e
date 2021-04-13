@@ -4,6 +4,6 @@ spring.datasource.password=anand123
 
 server.port=9091
 
-keyFile=jwtiscool.jks
+keyFile=jwtiscool.jsk
 password=jwtiscool
 alias=jwtiscool

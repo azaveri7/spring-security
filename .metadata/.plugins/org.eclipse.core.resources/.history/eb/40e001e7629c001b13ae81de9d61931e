@@ -53,11 +53,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) 
 			throws Exception{
-		// JWT token store to store jwt tokens
 		endpoints.tokenStore(tokenStore())
-			.accessTokenConverter(jwtAccessTokenConverter())
-			.authenticationManager(authenticationManager)
-			.userDetailsService(userDetailsService);
+		.authenticationManager(authenticationManager)
+		.userDetailsService(userDetailsService);
 		
 		// jdbc token store used to store tokens in database
 		//endpoints.tokenStore(new JdbcTokenStore(dataSource))

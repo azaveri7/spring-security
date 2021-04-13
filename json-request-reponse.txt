@@ -1,0 +1,93 @@
+JWT request:
+
+URL: http://localhost:9091/oauth/token
+
+Operation: POST
+
+Auth: 
+
+	Type:     Basic
+	Username: couponclientapp
+	Password: 9999
+	
+Body:
+
+	x-www-form-urlencoded
+	
+		username:    doug@bailey.com
+		password:    doug
+		grant_type:  password
+		scopes:      read write
+		
+		
+Response:
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY291cG9uc2VydmljZSJdLCJ1c2VyX25hbWUiOiJkb3VnQGJhaWxleS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjE4MzY2OTMyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImU5M2JiMTZhLWRiYTUtNDZiOC1hMjRjLWY2NWY3OTZmNjI5YyIsImNsaWVudF9pZCI6ImNvdXBvbmNsaWVudGFwcCJ9.HJNhYBEL1A9LnyYUWPDHXDk3u-fsHlYEB70Ql3LjGSguuNv8E7LG3b-wWzQXf3WN_nd86AQmwINPnNDWQ2hmQcQulDuIO-O4Gus-wHjUACZtkm7Zdq8ygnOvCu1A61xuFBAQSFZsie1gWY6dlNCON5J8A3OEF9qGS8qd_oREbK-_ZZftkArgf0tHeQBhcvebTj08KAljyEF6eMEcBv0qnYjgSOUrzfOIfxwyoOvFObs33wD-jsbBJ0LyCyo4zicOqK3igQ1RHD_8nw4ZJ0Ln9Sk1CjgN10hDxXmQUVDVxjLMb7TftNXiRQB-p38WfGx1_aIN8OFgeBCIJgYR6W6fmQ",
+    "token_type": "bearer",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY291cG9uc2VydmljZSJdLCJ1c2VyX25hbWUiOiJkb3VnQGJhaWxleS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXRpIjoiZTkzYmIxNmEtZGJhNS00NmI4LWEyNGMtZjY1Zjc5NmY2MjljIiwiZXhwIjoxNjIwOTE1NzMyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImFmMjJmNDRlLTA2M2UtNDBkNi1iYjRmLWI0NjNjZTU0Yjg5ZSIsImNsaWVudF9pZCI6ImNvdXBvbmNsaWVudGFwcCJ9.PBfs_JxbKzlCiuzH7HlE9AD-Ln0ITTQlo97tzc3_LpQ1PxjAo8w0hW6fvCDYgRpe7HCJV4I-aSxhjpJjtgxJOgIWfY3toGzqjbcqwfWn-k6qXKG0GzYMi07ig0qQGNjeLICb0ade02-bjuNTBXpbXlSc_Qo1DqVvVqbcm_09sW2d8RF0V6k-riBc6xi6eZixOLDhG30kjnXEsD7Knas0YdNtOJUl89uhGX5EmLmrAXwAgIGA_0gpDaHoWK4cwJ8Iy7eJrG9g7W8CudEyWv8Y39qQwmqKoPJ7P0FBkj-e_7HInVvvTnw-L0D02yLcZhf8TYftOJ2wjIhS_Vo2HMZHjg",
+    "expires_in": 43199,
+    "scope": "read write",
+    "jti": "e93bb16a-dba5-46b8-a24c-f65f796f629c"
+}
+
+URL: http://localhost:9091/couponapi/coupons/SUPERSALE
+
+Operation: GET
+
+Auth: 
+
+	Type:     Bearer Token
+	
+Headers:
+
+	Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY291cG9uc2VydmljZSJdLCJ1c2VyX25hbWUiOiJkb3VnQGJhaWxleS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjE4MzY2OTMyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImU5M2JiMTZhLWRiYTUtNDZiOC1hMjRjLWY2NWY3OTZmNjI5YyIsImNsaWVudF9pZCI6ImNvdXBvbmNsaWVudGFwcCJ9.HJNhYBEL1A9LnyYUWPDHXDk3u-fsHlYEB70Ql3LjGSguuNv8E7LG3b-wWzQXf3WN_nd86AQmwINPnNDWQ2hmQcQulDuIO-O4Gus-wHjUACZtkm7Zdq8ygnOvCu1A61xuFBAQSFZsie1gWY6dlNCON5J8A3OEF9qGS8qd_oREbK-_ZZftkArgf0tHeQBhcvebTj08KAljyEF6eMEcBv0qnYjgSOUrzfOIfxwyoOvFObs33wD-jsbBJ0LyCyo4zicOqK3igQ1RHD_8nw4ZJ0Ln9Sk1CjgN10hDxXmQUVDVxjLMb7TftNXiRQB-p38WfGx1_aIN8OFgeBCIJgYR6W6fmQ
+	
+	
+		
+		
+Response:
+
+{
+    "code": "SUPERSALE",
+    "discount": 10.000,
+    "expDate": "12/12/2021"
+}
+
+JWT decoder:
+
+https://jwt.io/
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY291cG9uc2VydmljZSJdLCJ1c2VyX25hbWUiOiJkb3VnQGJhaWxleS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjE4MzY2OTMyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImU5M2JiMTZhLWRiYTUtNDZiOC1hMjRjLWY2NWY3OTZmNjI5YyIsImNsaWVudF9pZCI6ImNvdXBvbmNsaWVudGFwcCJ9.HJNhYBEL1A9LnyYUWPDHXDk3u-fsHlYEB70Ql3LjGSguuNv8E7LG3b-wWzQXf3WN_nd86AQmwINPnNDWQ2hmQcQulDuIO-O4Gus-wHjUACZtkm7Zdq8ygnOvCu1A61xuFBAQSFZsie1gWY6dlNCON5J8A3OEF9qGS8qd_oREbK-_ZZftkArgf0tHeQBhcvebTj08KAljyEF6eMEcBv0qnYjgSOUrzfOIfxwyoOvFObs33wD-jsbBJ0LyCyo4zicOqK3igQ1RHD_8nw4ZJ0Ln9Sk1CjgN10hDxXmQUVDVxjLMb7TftNXiRQB-p38WfGx1_aIN8OFgeBCIJgYR6W6fmQ
+
+results to 
+
+Header:
+
+{
+  "alg": "RS256",
+  "typ": "JWT"
+}
+
+Body:
+
+Signature:
+
+{
+  "aud": [
+    "couponservice"
+  ],
+  "user_name": "doug@bailey.com",
+  "scope": [
+    "read",
+    "write"
+  ],
+  "exp": 1618366932,
+  "authorities": [
+    "ROLE_ADMIN"
+  ],
+  "jti": "e93bb16a-dba5-46b8-a24c-f65f796f629c",
+  "client_id": "couponclientapp"
+}
+
+

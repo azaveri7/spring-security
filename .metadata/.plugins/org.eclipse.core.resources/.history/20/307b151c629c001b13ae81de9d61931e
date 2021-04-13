@@ -3,7 +3,3 @@ spring.datasource.username=root
 spring.datasource.password=anand123
 
 server.port=9091
-
-keyFile=jwtiscool.jks
-password=jwtiscool
-alias=jwtiscool

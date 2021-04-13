@@ -1,0 +1,5 @@
+package com.anand.springcloud.config;
+
+public class AuthorizationServerConfig {
+
+}

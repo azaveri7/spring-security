@@ -1,0 +1,14 @@
+user request -> authentication filter -> authentication manager -> authentication provider -> user details service
+                                                                                   ||
+                                                                                   password encoder
+
+1. end user sends req to our REST app, auth filter intercepts this request. It is 
+   servlet filter class which will check if the user has authentication.
+2. If not, the request is passed to auth mgr to check if the user details are valid.
+3. auth mgr uses auth provider where login logic is there.
+4. auth provider will use user details service to retrieve pwd.
+5. passcode encoder is used to encrypt pwds and store.
+6. if the details match with user details service, auth filter will 
+   use authenticationSuccessHandler and stores authentication info in the user
+   entity in security context.
+      

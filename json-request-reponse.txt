@@ -31,6 +31,8 @@ Response:
     "jti": "e93bb16a-dba5-46b8-a24c-f65f796f629c"
 }
 
+******************************
+
 URL: http://localhost:9091/couponapi/coupons/SUPERSALE
 
 Operation: GET
@@ -90,4 +92,62 @@ Signature:
   "client_id": "couponclientapp"
 }
 
+******************************
 
+JWT request when separate auth server:
+
+URL: http://localhost:9092/oauth/token
+
+Operation: POST
+
+Auth: 
+
+	Type:     Basic
+	Username: couponclientapp
+	Password: 9999
+	
+Body:
+
+	x-www-form-urlencoded
+	
+		username:    doug@bailey.com
+		password:    doug
+		grant_type:  password
+		scopes:      read write
+		
+		
+Response:
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY291cG9uc2VydmljZSJdLCJ1c2VyX25hbWUiOiJkb3VnQGJhaWxleS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjE4MzY5MzIxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6IjljNWYzZWRmLWY1NTYtNGQ5Yi04YzExLTI5NDJlZWJkZjRkZiIsImNsaWVudF9pZCI6ImNvdXBvbmNsaWVudGFwcCJ9.j1yWeQEp-lZYpd6PofGfBQur4lojGGeqj5mVZ3r4x0fZB688IyCth00yO3GDYRb1sWxeFIo-YuosX-6FbRKd8UJieRLAd0VC54tF4rx6uMgrW60eCGPU2ty9NGyyB1HIikwL2HY_ob5thIdyuoqlB-KiCMkDZ2U9pyekkgbYWDRIMPIy__rX6yEzgIf1f55mxwW-AjtL0m7IIng_aba3dGj6ip7a43IyzD1iza89l8u6z-gimkJL-UXfCm45ZO8Puv1HHW5oJcoB6vz72_rxwQEszxF8cKm6EFmF2W6N652rPl762Z_FOLsg8fNpgvKV8CSiM474JaZAr0sDcFSG3Q",
+    "token_type": "bearer",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY291cG9uc2VydmljZSJdLCJ1c2VyX25hbWUiOiJkb3VnQGJhaWxleS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXRpIjoiOWM1ZjNlZGYtZjU1Ni00ZDliLThjMTEtMjk0MmVlYmRmNGRmIiwiZXhwIjoxNjIwOTE4MTIxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImE0YWEyMGY1LTcyMmItNDgzYi1hNmVmLTIyOWE2ZDJjYWNiOSIsImNsaWVudF9pZCI6ImNvdXBvbmNsaWVudGFwcCJ9.M22zXfswXt_cEg-D7rdTzCo1uISEJdqoc8CL0wC9YQMnAa6Bdqh1qpd1lxTk8tb7Im3w8iVRcsHPYbosMp_CouhJjfYzhC8XymNV3IKJAKrRjS-iKXR6elKhRnUMZmrB6AIQLVOGF-4ue4U--30euvb7KDSQC4knqlXMakZScOAt5Vjf4oJ6EUU5OcdD0SmlJweUup8kxpW8r8yXfxcStsnxIFpw6o2RKAsODIyXC1zoB8TP0k2vPyXwQRnh6-9De0vx6UDYSCDrxXniFxK9nI5U4f-LYBmUsd2ig3HjyX_wkNuKdR7ADgv6z5q_hn1lhHzZOb8RlwlM7izpjLqV3w",
+    "expires_in": 43199,
+    "scope": "read write",
+    "jti": "9c5f3edf-f556-4d9b-8c11-2942eebdf4df"
+}
+
+******************************
+
+URL: http://localhost:9091/couponapi/coupons/SUPERSALE
+
+Operation: GET
+
+Auth: 
+
+	Type:     Bearer Token
+	
+Headers:
+
+	Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY291cG9uc2VydmljZSJdLCJ1c2VyX25hbWUiOiJkb3VnQGJhaWxleS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjE4MzY5MzIxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6IjljNWYzZWRmLWY1NTYtNGQ5Yi04YzExLTI5NDJlZWJkZjRkZiIsImNsaWVudF9pZCI6ImNvdXBvbmNsaWVudGFwcCJ9.j1yWeQEp-lZYpd6PofGfBQur4lojGGeqj5mVZ3r4x0fZB688IyCth00yO3GDYRb1sWxeFIo-YuosX-6FbRKd8UJieRLAd0VC54tF4rx6uMgrW60eCGPU2ty9NGyyB1HIikwL2HY_ob5thIdyuoqlB-KiCMkDZ2U9pyekkgbYWDRIMPIy__rX6yEzgIf1f55mxwW-AjtL0m7IIng_aba3dGj6ip7a43IyzD1iza89l8u6z-gimkJL-UXfCm45ZO8Puv1HHW5oJcoB6vz72_rxwQEszxF8cKm6EFmF2W6N652rPl762Z_FOLsg8fNpgvKV8CSiM474JaZAr0sDcFSG3Q
+	
+	
+		
+		
+Response:
+
+{
+    "code": "SUPERSALE",
+    "discount": 10.000,
+    "expDate": "12/12/2021"
+}

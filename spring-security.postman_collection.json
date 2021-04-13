@@ -15,7 +15,16 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "JWT token from separate Auth Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get coupon details using JWT",
 			"request": {
 				"method": "GET",
 				"header": [],
